@@ -18,6 +18,9 @@
     <LibraryReferences>{782bd72f-56a1-49ac-82d6-562c87b26985}</LibraryReferences>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="DUTs\Cylinder.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="DUTs\TurboPump.TcPOU">
       <SubType>Code</SubType>
     </Compile>
