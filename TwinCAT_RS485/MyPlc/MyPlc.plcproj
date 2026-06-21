@@ -21,6 +21,9 @@
     <Compile Include="DUTs\Cylinder.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="DUTs\MAX2.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="DUTs\TurboPump.TcPOU">
       <SubType>Code</SubType>
     </Compile>

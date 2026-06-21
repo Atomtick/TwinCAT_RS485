@@ -4,17 +4,44 @@
     <Declaration><![CDATA[// SerialPort元件
 FUNCTION_BLOCK TurboPump
 VAR_INPUT
+	SetTmsTemp_CmdTransId:UINT;
 END_VAR
 VAR_OUTPUT
+	SetTmsTemp_EchoTransId : UINT;
+	SetTmsTemp_ErrorCode:BYTE;
 END_VAR
 VAR
+	
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[]]></ST>
+      <ST><![CDATA[IF SetTmsTemp_CmdTransId <> SetTmsTemp_EchoTransId THEN
+	IF SetTmsTemp_ErrorCode <> 0 THEN
+		SetTmsTemp(temp:= 100);
+		SetTmsTemp_ErrorCode := 1;
+	END_IF
+END_IF]]></ST>
     </Implementation>
+    <Method Name="SetTmsTemp" Id="{b3b0f644-0087-4513-b113-740716a7842f}">
+      <Declaration><![CDATA[METHOD PUBLIC SetTmsTemp
+VAR_INPUT
+	temp :REAL;
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[]]></ST>
+      </Implementation>
+    </Method>
     <LineIds Name="TurboPump">
       <LineId Id="9" Count="0" />
+      <LineId Id="24" Count="0" />
+      <LineId Id="26" Count="0" />
+      <LineId Id="28" Count="0" />
+      <LineId Id="27" Count="0" />
+      <LineId Id="25" Count="0" />
+    </LineIds>
+    <LineIds Name="TurboPump.SetTmsTemp">
+      <LineId Id="5" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.16">
+  <POU Name="MAX2" Id="{9132d441-4b4f-4efd-9de7-e7fd407a8bbf}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION MAX2 : INT
+VAR_INPUT
+	a : INT;
+	b:INT;
+END_VAR
+VAR_OUTPUT
+	c:INT;
+	
+END_VAR
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF a >= b THEN
+	MAX2 := a;
+	c:=a;
+ELSE
+	MAX2 := b;
+	c:=b;
+END_IF]]></ST>
+    </Implementation>
+    <LineIds Name="MAX2">
+      <LineId Id="7" Count="0" />
+      <LineId Id="18" Count="1" />
+      <LineId Id="21" Count="2" />
+      <LineId Id="17" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
